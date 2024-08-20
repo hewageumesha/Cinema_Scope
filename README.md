@@ -16,23 +16,17 @@ Cinema Scope is a simple RESTful API built with Go that allows you to manage a c
 #### Steps
  - Clone the repository:
 ```
-bash
-Copy code
 git clone https://github.com/yourusername/cinema-scope.git
 cd cinema-scope
 ```
 
  - Install dependencies:
 ```
-bash
-Copy code
 go get -u github.com/gorilla/mux
 ```
 
  - Run the server:
 ```
-bash
-Copy code
 go run main.go
 ```
 
@@ -54,7 +48,6 @@ The server will start on http://localhost:8080.
 - Method: `POST`
 - Request Body:
 ```json
-Copy code
 {
   "name": "Inception",
   "director": "Christopher Nolan",
@@ -69,7 +62,6 @@ Copy code
 - Method: `PUT`
 - Request Body:
 ```json
-Copy code
 {
   "name": "Inception Updated",
   "director": "Christopher Nolan",
