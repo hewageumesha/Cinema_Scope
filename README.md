@@ -29,8 +29,7 @@ go get -u github.com/gorilla/mux
 ```
 go run main.go
 ```
-
-The server will start on http://localhost:8080.
+ - The server will start on http://localhost:8080.
 
 ### API Endpoints
 1. Get All Movies
