@@ -56,6 +56,7 @@ func AddMovie(w http.ResponseWriter, r *http.Request) {
 	}
 	idCounter++
 	movie.ID = idCounter
+
 	movies = append(movies, movie)
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(movie)
@@ -124,6 +125,8 @@ func main() {
 		ReleaseDate: time.Date(2024, 5, 24, 0, 0, 0, 0, time.UTC),
 		Link:        "https://youtu.be/p08MmWoFbg8?si=zA8zkIGrfsCB5Ke4",
 	})
+
+	idCounter = len(movies)
 
 	// API routes
 	r.HandleFunc("/api/movies", GetMovies).Methods("GET")
