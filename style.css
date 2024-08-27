@@ -1,0 +1,49 @@
+.movie-container {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  .movie-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .movie-container p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-container .movie-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .movie-container .movie-info .label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .movie-container .movie-info .value {
+    font-size: 16px;
+  }
+  
+  .movie-container .rating {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9900;
+  }
+  
+  .movie-container .link {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  .movie-container .link:hover {
+    color: #23527c;
+  }

@@ -44,6 +44,7 @@ func GetMovieByID(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 	}
+	http.Error(w, "Movie not found", http.StatusNotFound)
 }
 
 // API: Add a new movie
@@ -109,6 +110,9 @@ func DeleteMovie(w http.ResponseWriter, r *http.Request) {
 func main() {
 	// Initialize the router
 	r := mux.NewRouter()
+
+	// Serve static files
+	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./"))))
 
 	// Prepopulate some example movies
 	movies = append(movies, Movie{
