@@ -1,0 +1,149 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  animation: slideIn 1s ease-in-out;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  animation: popIn 1.5s ease-in-out;
+}
+
+.bordered-form {
+  border: 2px solid #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bordered-form:hover {
+  transform: scale(1.02);
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: #2980b9;
+}
+
+#add-movie-btn, #update-movie-btn {
+  background-color: #3498db;
+}
+
+#delete-movie-btn {
+  background-color: #e74c3c;
+}
+
+.movie-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card h3 {
+  margin-top: 0;
+}
+
+.movie-card p {
+  margin: 5px 0;
+}
+
+.movie-card a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.movie-card a:hover {
+  text-decoration: underline;
+}
+
+.movie-card .actions {
+  margin-top: 10px;
+}
+
+.movie-card button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.movie-card button.edit {
+  background-color: #f39c12;
+  color: white;
+}
+
+.movie-card button.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.movie-card button:hover {
+  opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

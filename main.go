@@ -112,7 +112,7 @@ func main() {
 	r := mux.NewRouter()
 
 	// Serve static files
-	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./"))))
+	r.PathPrefix("/").Handler(http.StripPrefix("/", http.FileServer(http.Dir("./static"))))
 
 	// Prepopulate some example movies
 	movies = append(movies, Movie{
